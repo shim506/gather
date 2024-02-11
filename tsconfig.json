@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
@@ -18,7 +17,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "preserve",
+    "jsxImportSource": "@emotion/react",
+    "paths": {
+      "@custom-utils/*": ["../../packages/custom-utils/*"],
+      "@design-system/*": ["./*"],
+    },
+    "baseUrl": "."
   },
   "include": [
     "src"
